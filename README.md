@@ -66,7 +66,7 @@ For a 100% optimal solution, see the advanced usage below.
 
 In order to specify a filename, we have to take things server-side unfortunately. You'll need to create an action on the server that you can submit a form to.
 
-In Ruby, that action will look like this:
+In Ruby on Rails, that action will look like this:
 
 ```ruby
 send_data Base64.decode64(params[:png]), type: 'image/png', disposition: 'attachment', filename: params[:filename]
@@ -81,7 +81,7 @@ $file = base64_decode(str_replace(' ', '+', $_POST['png']));
 echo $file;
 ```
 
-(I'd be happy to include other languages if someone wants to submit a pull request.)
+(I'd be happy to include other languages/frameworks if someone wants to submit a pull request.)
 
 Now when you call pnglink, you can specify the filename and action with something like this:
 
