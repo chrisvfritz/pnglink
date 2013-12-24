@@ -2,11 +2,11 @@
 
 **pnglink** allows dynamic content, created by libraries like [D3.js](http://d3js.org/), to be downloaded as a PNG snapshot with a single click. 
 
-I love using D3.js to code up amazing, auto-updating visualizations of my data. There's only one problem. Users always seem to want a download button to a regular, old image format they can paste into a report. I thought of explaining that images like PNGs were static and our content was dynamic. I almost encouraged them to just take a screenshot and crop it.
+I love using D3.js to code up amazing, auto-updating visualizations of my data. There's only one problem. Users always seem to want a button to download a regular old image format they can paste into a report. I thought of explaining that images like PNGs were static and our content was dynamic. I almost encouraged them to just take a screenshot and crop it.
 
 I like a challenge though.
 
-And so this is the collection of unappreciatedly elaborate hacks I've been using to achieve what most users assume should be simple, now tied up in a neat, jQuery plugin bow.
+And so this is the collection of unfortunately elaborate hacks I've been using to achieve what most users assume should be simple, now tied up in a neat, jQuery plugin bow.
 
 ## Simple Usage
 
@@ -50,7 +50,7 @@ text {
 </style>
 ```
 
-And then to download a PNG file when you click on a visualization, you just need one line:
+Then lastly, to download a PNG file when you click on a visualization, you just need one line:
 
 ```javascript
 $('#visualization_container').pnglink();
@@ -64,7 +64,7 @@ For a 100% optimal solution, see the advanced usage below.
 
 ### Specify a filename
 
-In order to specify a filename, we have to take things server-side unfortunately. You'll need to create an action on the server that you can submit a form to.
+In order to specify a filename, we unfortunately have to take things server-side. You'll need to create an action on the server that you can submit a form to.
 
 In Ruby on Rails, that action will look like this:
 
@@ -112,3 +112,11 @@ $('#visualization_container').pnglink({
   instructions: 'Click on the chart to download a copy'
 });
 ```
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
