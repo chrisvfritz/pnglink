@@ -36,7 +36,7 @@ For a 100% optimal solution, see the advanced usage below.
 
 ## Advanced Usage
 
-### Specifying a filename
+### Specify a filename
 
 In order to specify a filename, we have to take things server-side unfortunately. You'll need to create an action on the server that you can submit a form to.
 
@@ -77,7 +77,7 @@ $('#visualization_container').pnglink({
 });
 ```
 
-### Changing the hover tooltip instructions
+### Change the hover tooltip instructions
 
 If you don't like the default tooltip instructions ("Click to download as PNG"), you can change it to whatever you want. It should be noted though that this option only takes effect when not specifying a separate target.
 
