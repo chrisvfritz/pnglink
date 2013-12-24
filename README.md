@@ -24,6 +24,32 @@ Then you'll need a container for your visualization, which you'll likely already
 <div id="visualization_container"></div>
 ```
 
+**IMPORTANT STYLING NOTE**: Since we'll be taking a snapshot of the SVG, any styling applied to objects within the SVG from outside of it (e.g. from an included stylesheet or external style tag) will not be applied to the generated PNG. That means you'll want to style your visualizations explicitly from within the SVG. Below is an example with D3.js.
+
+This is good and will work:
+
+```javascript
+var text = vis.selectAll("text")
+	    .data(d3.range(n))
+	  .enter().append("svg:text")
+	    .attr("font-weight","bold")
+	    .attr("font-size",16)
+	    .attr("fill","#333")
+	    .text(function(d, i) { return labels[i]; });
+```
+
+This is bad and will fail:
+
+```html
+<style>
+text {
+  font-weight: bold;
+  font-size: 16;
+  fill: #333;
+}
+</style>
+```
+
 And then to download a PNG file when you click on a visualization, you just need one line:
 
 ```javascript
