@@ -9,7 +9,7 @@
         instructions: 'Click to download as PNG',
         target: 'self',
         action: '',
-        filename: 'image.png',
+        filename: 'image.png'
       };
 
   function Plugin ( element, options ) {
